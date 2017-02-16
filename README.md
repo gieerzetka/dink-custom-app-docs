@@ -23,10 +23,9 @@ do a little more work. We provide a DKPlugin API that offers methods to communic
 the underlying platform.
 
 This can be set up in a few steps:
-1. include a app_dink.js script in your index.html
-This app_dink.js file should be empty and will be overwritten by our system when used in the d!nk application.
-2. make sure the include an empty script called phonegap.js.
-This file will also be overwritten by our system when used in the d!nk application
+
+1. include a app_dink.js script in your index.html, this app_dink.js file should be empty and will be overwritten by our system when used in the d!nk application
+2. make sure the include an empty script called phonegap.js, this file will also be overwritten by our system when used in the d!nk application
 3. on IOS you'll need to wait for the deviceready event in order to use the DKPlugin API
 
 An example of such an app is provided in : [app_with_dink_integration](/app_with_dink_integration/index.html)
