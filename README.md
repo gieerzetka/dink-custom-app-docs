@@ -32,7 +32,7 @@ An example of such an app is provided in : [app_with_dink_integration](/app_with
 
 Gotchas :
 * When uploading a zip in the d!nk admin please make sure the index.html file is in the root directory of the zip archive
-* Do not include the Phonegap/Cordova library yourself. This will conflict with the platform code and result in errors.
+* Do not include the Phonegap/Cordova library yourself because this will conflict with the platform code, and result in errors
 
 ##DKPlugin API
 
