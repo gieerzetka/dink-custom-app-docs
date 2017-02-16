@@ -14,7 +14,7 @@ If your javascript application works smoothly without a server it should also
 work within our d!nk apps.
 
 Gotchas :
-* When uploading a zip in the d!nk admin please make sure the index.html file is in the root directory of the zip archive
+* when uploading a zip in the d!nk admin please make sure the index.html file is in the root directory of the zip archive
 
 ##Apps with d!nk integration
 
@@ -31,8 +31,8 @@ This can be set up in a few steps:
 An example of such an app is provided in : [app_with_dink_integration](/app_with_dink_integration/index.html)
 
 Gotchas :
-* When uploading a zip in the d!nk admin please make sure the index.html file is in the root directory of the zip archive
-* Do not include the Phonegap/Cordova library yourself because this will conflict with the platform code, and result in errors
+* when uploading a zip in the d!nk admin please make sure the index.html file is in the root directory of the zip archive
+* do not include the Phonegap/Cordova library yourself because this will conflict with the platform code, and result in errors
 
 ##DKPlugin API
 
