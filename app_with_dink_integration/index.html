@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Example app with d!nk integration</title>
+
+    <link href="app.css" rel="stylesheet" />
+
+    <script src="phonegap.js"></script>
+    <script src="app_dink.js"></script>
+
+
+    <script type="text/javascript" charset="utf-8">
+        // Wait for Cordova device API libraries to load
+        window.G = {};
+        G.cordovaReady = false;
+
+        G.success = function(result) {
+            var data = JSON.parse(result);
+            console.log('DKPlugin.getPublicationDetails success');
+            console.log("download url : " + data.durl);
+            document.getElementById('downloadUrl').value = data.durl;
+        };
+
+        G.failure = function(result) {
+            console.log('DKPlugin.getPublicationDetails failure');
+        };
+
+        // device APIs are available
+        function onDeviceReady() {
+            // Now safe to use device APIs
+            console.log("Cordova libraries loaded...");
+            G.cordovaReady = true;
+            DKPlugin.getPublicationDetails('', G.success, G.failure);
+        }
+
+        function onLoad() {
+            if (window.cordova) {
+                document.addEventListener('deviceready', onDeviceReady, false);
+            } else {
+                console.log('not using cordova');
+                onDeviceReady();
+            }
+        }
+    </script>
+</head>
+
+
+<body onload="onLoad()">
+    <h1>Hello world!</h1>
+    <label>Hello world!</label>
+    </br/>
+    <input type="text" id="downloadUrl" />
+</body>
+
+</html>

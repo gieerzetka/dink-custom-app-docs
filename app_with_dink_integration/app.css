@@ -1,0 +1,6 @@
+html {
+    /* IE10 */
+    -ms-touch-action: none;
+    /* IE11 */
+    touch-action: none;
+}
