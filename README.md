@@ -36,4 +36,9 @@ Gotchas :
 
 ##DKPlugin API
 
-All info about the DKPlugin API can be found at : https://dhemedia.github.io/dink-dkplugin-api/interfaces/dk.dkplugin.html
+All info about the DKPlugin javascript API can be found at : https://dhemedia.github.io/dink-dkplugin-api/interfaces/dk.dkplugin.html
+
+Although the API docs should provide a clear picture it's not always easy for 3rd parties to
+get the stats registered properly. That's why an example of an Angular service for registering
+stats is provided in [statservice.js] (/snippets/statservice.js)
+It illustrates the basic logic and should get you on your way.
