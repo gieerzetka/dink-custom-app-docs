@@ -36,4 +36,4 @@ Gotchas :
 
 ##DKPlugin API
 
-All info about the DKPlugin API can be found at : TODO
+All info about the DKPlugin API can be found at : https://dhemedia.github.io/dink-dkplugin-api/interfaces/dk.dkplugin.html
