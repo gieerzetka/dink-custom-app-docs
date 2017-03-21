@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Fetch PDFs From Enterprise Sample</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="scripts/config.js" type="text/javascript"></script>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+
+    <script src="phonegap.js"></script>
+    <script src="app_dink.js"></script>
+
+
+    <script type="text/javascript" charset="utf-8">
+        // Wait for Cordova device API libraries to load
+        window.G = {};
+        G.cordovaReady = false;
+
+        G.credentialsSuccess = function (credentials) {
+            var creds = JSON.parse(credentials);
+            console.log('DKPlugin.getCredentials.success');
+            G.userEmail = creds.login;
+            G.pwd = creds.password;
+        };
+
+        G.credentialsFailure = function () {
+            console.log('Could not load user credentials!');
+        };
+
+        // device APIs are available
+        function onDeviceReady() {
+            // Now safe to use device APIs
+            console.log("Cordova libraries loaded...");
+            G.cordovaReady = true;
+            DKPlugin.getCredentials(G.credentialsSuccess, G.credentialsFailure);
+        }
+
+        function onLoad() {
+            if (window.cordova) {
+                document.addEventListener('deviceready', onDeviceReady, false);
+            } else {
+                console.log('not using cordova');
+                onDeviceReady();
+            }
+        }
+
+    </script>
+</head>
+
+<!-- apply our angular app to our site -->
+<body ng-app="app" onload="onLoad()">
+    v.50
+    <div ng-view></div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

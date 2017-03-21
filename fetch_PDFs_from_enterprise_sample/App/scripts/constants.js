@@ -1,0 +1,1 @@
+﻿app.constant('BASE_API_URL', 'https://admin.dink.eu/');

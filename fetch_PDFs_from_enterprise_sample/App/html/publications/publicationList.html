@@ -1,0 +1,66 @@
+﻿<div class="row">
+    <div class="col-sm-4">
+        <div class="row">
+            <div class="col-sm-12">
+                <span class="page-title">List of kiosks</span>
+            </div>
+        </div>
+        <div class="row kiosk-wrapper" ng-repeat="kiosk in kiosks">
+            <div class="col-sm-8">
+                <a href="" ng-click="viewKioskPublications(kiosk)">{{kiosk.name}}</a>
+            </div>
+            <div class="col-sm-4" ng-if="kiosk.googleDrive">
+                <a href="{{kiosk.googleDrive}}" target="_blank" class="btn btn-default">Open drive</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8" ng-if="selectedKiosk">
+        <div class="row">
+            <div class="col-sm-12">
+                <span class="page-title">Publications in {{selectedKiosk.name}} kiosk</span>
+            </div>
+        </div>
+        <div class="row publication-wrapper" ng-repeat="publication in selectedKiosk.publications">
+            <div class="col-sm-3">
+                <img ng-src="{{ publication.coverUrl }}" alt="{{ publication.name }}" width="145" />
+            </div>
+            <div class="col-sm-9">
+                <div>
+                    <span>{{ publication.name }}</span>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div>
+                            <button type="button" class="btn btn-default" ng-click="openPublication(publication)">Open in kiosk</button>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-default" ng-click="addToAccountHubBasket(publication)">Add to Account Hub basket</button>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-default" ng-click="viewInApp(publication)">View in App</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div>
+                            <button type="button" class="btn btn-default" ng-click="downloadPublication(publication)">Download (View in browser)</button>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-default" ng-click="sharePublication(publication)">Share</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" ng-if="selectedKiosk && !selectedKiosk.publications">
+            <div class="col-sm-12">
+                <span>Loading..</span>
+            </div>
+        </div>
+        <div class="row" ng-if="selectedKiosk && selectedKiosk.publications.length == 0">
+            <div class="col-sm-12">
+                <span>There are no publications in selected kiosk</span>
+            </div>
+        </div>
+    </div>
+</div>
+

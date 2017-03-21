@@ -1,0 +1,30 @@
+﻿body {
+}
+
+.page-title {
+    color: #C3C4C3;
+    font-size: 24px;
+    margin-left: 40px;
+}
+
+.list-table-wrapper {
+    background: #EDEEEC;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+label {
+   color: #5E605B;
+}
+
+.kiosk-wrapper {
+    padding: 10px;
+    font-size: large;
+    color: #A5A6A3;
+}
+
+.publication-wrapper {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 2px solid #A5A6A3;
+}
