@@ -41,6 +41,17 @@ All info about the DKPlugin javascript API can be found at : https://dhemedia.gi
 For tests outside the d!nk application environment you can write a mock object that implements
 the DKPlugin interface methods that are relevant to your application.
 
+##Sample app with d!nk integration
+
+An example of the app provided in [fetch_PDFs_from_enterprise_sample] shows how to:
+* connect to the d!nk API's to fetch kiosks and (pdf) publications
+* open pdf publication in kiosk
+* add pdf publication to the Account Hub basket
+* open pdf publication in the d!nk app
+* download pdf publication (view in browser)
+* share pdf publication directly to the Account Hub
+* open Google Drive of the kiosk
+
 ###Some extra info about stats
 Although the API docs should provide a clear picture it's not always easy for 3rd parties to
 get the stats registered properly. That's why an example of an Angular service for registering
