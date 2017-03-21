@@ -43,7 +43,7 @@ the DKPlugin interface methods that are relevant to your application.
 
 ## Sample app with d!nk integration
 
-An example of the app provided in [fetch_PDFs_from_enterprise_sample] shows how to:
+An example of the app provided in [fetch_PDFs_from_enterprise_sample](/fetch_PDFs_from_enterprise_sample/README.md) shows how to:
 * connect to the d!nk API's to fetch kiosks and (pdf) publications
 * open pdf publication in kiosk
 * add pdf publication to the Account Hub basket
